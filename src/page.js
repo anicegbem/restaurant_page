@@ -12,6 +12,7 @@ function createHeader() {
 function createNav() {
     const nav = document.createElement('nav');
     const ul = document.createElement('ul');
+    const main = document.getElementById("content");
     
     
     for(let i = 0; i < 3; i++) {
@@ -22,6 +23,9 @@ function createNav() {
             btn.innerText = "Home";
             btn.setAttribute('id', 'Home');
             li.appendChild(btn);
+            btn.addEventListener('click', function() {
+                main.innerHTML = "rice";
+            })
         } else if (i === 1) {
             btn.innerText = "Menu";
             btn.setAttribute('id', 'Menu');
@@ -40,6 +44,7 @@ function createNav() {
 
 function createMain() {
     const main = document.createElement('main');
+    main.setAttribute('id', 'main');
     const h3 = document.createElement('h3');
     h3.innerText = "Best Dressed Pork in Town"
     const p = document.createElement('p');
@@ -53,6 +58,11 @@ function createMain() {
 
 function createFooter() {
     const footer = document.createElement('footer');
+    const p = document.createElement('p');
+    p.innerText = "Copyright &copy; 2023 Sedondo"
+    footer.appendChild(p);
+
+    return footer;
     
 
 }
@@ -62,6 +72,7 @@ function loadPage() {
     const body = document.body
     content.appendChild(createHeader());
     content.appendChild(createMain());
+    content.appendChild(createFooter());
     body.appendChild(content);
     
     return body;
