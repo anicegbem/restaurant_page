@@ -1,3 +1,6 @@
+// import createMenu from './menu.js';
+import loadHome from './home.js';
+
 function createHeader() {
     const header = document.createElement('header');
     const h1 = document.createElement('h1');
@@ -5,40 +8,52 @@ function createHeader() {
     header.appendChild(h1);
     header.appendChild(createNav());
 
-    return header
+    return header;
 
 }
 
 function createNav() {
     const nav = document.createElement('nav');
     const ul = document.createElement('ul');
-    const main = document.getElementById("content");
-    
-    
-    for(let i = 0; i < 3; i++) {
-        const btn = document.createElement('button');
-        btn.setAttribute('type', 'button');
-        const li = document.createElement('li');
-        if(i === 0) {
-            btn.innerText = "Home";
-            btn.setAttribute('id', 'Home');
-            li.appendChild(btn);
-            btn.addEventListener('click', function() {
-                main.innerHTML = "rice";
-            })
-        } else if (i === 1) {
-            btn.innerText = "Menu";
-            btn.setAttribute('id', 'Menu');
-            li.appendChild(btn);
-        } else if (i === 2) {
-            btn.innerText = "Contact";
-            btn.setAttribute('id', 'Contact');
-            li.appendChild(btn);
-        }
-        ul.appendChild(li);
+    // const main = createMain();
 
-    }
-    nav.appendChild(ul);
+    const homeBtn = document.createElement('button');
+    homeBtn.innerText = "Home";
+    homeBtn.addEventListener('click', function() {
+        loadHome();  
+    });
+
+    const menuBtn = document.createElement('button');
+    menuBtn.innerText = "Menu";
+    
+
+    nav.appendChild(homeBtn);
+    
+    
+    // for(let i = 0; i < 3; i++) {
+    //     const btn = document.createElement('button');
+    //     btn.setAttribute('type', 'button');
+    //     const li = document.createElement('li');
+    //     if(i === 0) {
+    //         btn.innerText = "Home";
+    //         btn.setAttribute('id', 'Home');
+    //         li.appendChild(btn);
+    //         btn.addEventListener('click', function() {
+    //             main.setAttribute('class', 'new')
+    //         })
+    //     } else if (i === 1) {
+    //         btn.innerText = "Menu";
+    //         btn.setAttribute('id', 'Menu');
+    //         li.appendChild(btn);
+    //     } else if (i === 2) {
+    //         btn.innerText = "Contact";
+    //         btn.setAttribute('id', 'Contact');
+    //         li.appendChild(btn);
+    //     }
+    //     ul.appendChild(li);
+
+    // }
+    // nav.appendChild(ul);
     return nav;
 }
 
