@@ -1,4 +1,4 @@
-// import createMenu from './menu.js';
+import loadMenu from './menu.js';
 import loadHome from './home.js';
 
 function createHeader() {
@@ -25,9 +25,13 @@ function createNav() {
 
     const menuBtn = document.createElement('button');
     menuBtn.innerText = "Menu";
-    
+    menuBtn.addEventListener('click', function() {
+        loadMenu();
+
+    })
 
     nav.appendChild(homeBtn);
+    nav.appendChild(menuBtn);
     
     
     // for(let i = 0; i < 3; i++) {
