@@ -1,4 +1,8 @@
+import Head from './images/head.png';
+
 function createHome() {
+    const myHead = new Image();
+    myHead.src = Head;
     const div = document.createElement('div');
     const h3 = document.createElement('h3');
     h3.innerText = "Best Dressed Pork in Town"
@@ -7,6 +11,7 @@ function createHome() {
 
     div.appendChild(h3);
     div.appendChild(p);
+    div.appendChild(myHead);
 
     return div;
 

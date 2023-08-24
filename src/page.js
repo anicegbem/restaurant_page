@@ -1,6 +1,7 @@
 import loadMenu from './menu.js';
 import loadHome from './home.js';
 import loadContact from './contact.js';
+import Head from './images/head.png';
 
 function createHeader() {
     const header = document.createElement('header');
@@ -71,6 +72,8 @@ function createNav() {
 }
 
 function createMain() {
+    const myHead = new Image();
+    myHead.src = Head;
     const main = document.createElement('main');
     main.setAttribute('id', 'main');
     const h3 = document.createElement('h3');
@@ -79,6 +82,7 @@ function createMain() {
     p.innerText = "Va ya nen igyo i Dondo!"
     main.appendChild(h3);
     main.appendChild(p);
+    main.appendChild(myHead);
     // insert an image here
 
     return main;
