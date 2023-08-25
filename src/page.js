@@ -2,6 +2,7 @@ import loadMenu from './menu.js';
 import loadHome from './home.js';
 import loadContact from './contact.js';
 import Head from './images/head.png';
+import './style.css';
 
 function createHeader() {
     const header = document.createElement('header');
@@ -74,6 +75,7 @@ function createNav() {
 function createMain() {
     const myHead = new Image();
     myHead.src = Head;
+    myHead.setAttribute('id', 'head');
     const main = document.createElement('main');
     main.setAttribute('id', 'main');
     const h3 = document.createElement('h3');
@@ -106,6 +108,8 @@ function loadPage() {
     content.appendChild(createMain());
     content.appendChild(createFooter());
     body.appendChild(content);
+
+    loadHome();
     
     return body;
 }

@@ -3,7 +3,9 @@ import Head from './images/head.png';
 function createHome() {
     const myHead = new Image();
     myHead.src = Head;
+    myHead.setAttribute('id', 'head');
     const div = document.createElement('div');
+    div.setAttribute('id', 'home')
     const h3 = document.createElement('h3');
     h3.innerText = "Best Dressed Pork in Town"
     const p = document.createElement('p');
