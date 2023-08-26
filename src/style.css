@@ -5,10 +5,11 @@ html {
     box-sizing: inherit;
 }
 body {
-    overflow: hidden;
+    overflow: auto;
     margin: 0;
     padding: 0;
 }
+
 
 #head {
     width: 30%;
@@ -20,14 +21,43 @@ body {
     align-items: center;
 }
 
-header {
+#menu {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 20px;
+    row-gap: 30px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    
+
+}
+
+#contact {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.card {
+    display: inline-block;
+    text-align: center;
+    background-color: beige;
+    padding: 40px;
+    /* display: flex; */
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2dd4bf;
+    padding: 10px;
+}
+
 button {
     margin-right: 30px;
+    padding: 5px 10px 5px 10px;
 }
 
 footer {
@@ -35,5 +65,7 @@ footer {
     bottom: 0;
     width: 100%;
     text-align: center;
+    background-color: #2dd4bf;
+    color: #fff;
     
 }

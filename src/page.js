@@ -93,7 +93,7 @@ function createMain() {
 function createFooter() {
     const footer = document.createElement('footer');
     const p = document.createElement('p');
-    p.innerText = "Copyright &copy; 2023 Sedondo"
+    p.innerText = `Copyright 2023 Sedondo`;
     footer.appendChild(p);
 
     return footer;

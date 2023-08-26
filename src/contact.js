@@ -1,5 +1,6 @@
 function createContact() {
     const contact = document.createElement('div');
+    contact.setAttribute('id', 'contact');
     const p = document.createElement('p');
     p.innerText = "+234 80 695 751 75";
     contact.appendChild(p);

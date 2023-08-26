@@ -1,7 +1,9 @@
 function createMenu() {
     const menu = document.createElement('div');
+    menu.setAttribute('id', 'menu');
     for(let i = 0; i < 4; i++) {
         const card = document.createElement('div');
+        card.setAttribute('class', 'card')
         const p = document.createElement('p');
         const h3 = document.createElement('h3');
         if(i === 0) {
