@@ -8,17 +8,33 @@ body {
     overflow: auto;
     margin: 0;
     padding: 0;
+    background-color: rgb(231, 231, 218);
+}
+
+@font-face {
+    font-family: 'Bricolage';
+    src: url('./BricolageGrotesque_18pt-ExtraLight.ttf');
+    font-style: normal;
+    font-weight: 600;
 }
 
 
 #head {
     width: 30%;
+    border-radius: 50%;
+    background-color: #fff;
+    padding: 14px;
 }
 
 #home {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: rgb(231, 231, 218);
+    padding-bottom: 75px;
+    height: 100%;
+    
+    
 }
 
 #menu {
@@ -27,7 +43,7 @@ body {
     grid-template-columns: repeat(2, auto);
     column-gap: 20px;
     row-gap: 30px;
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 20px;
     
 
@@ -37,6 +53,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 .card {
@@ -53,11 +70,21 @@ header {
     align-items: center;
     background-color: #2dd4bf;
     padding: 10px;
+    
+}
+
+main {
+    font-family: 'Bricolage';
+    /* margin-bottom: 80px; */
 }
 
 button {
     margin-right: 30px;
-    padding: 5px 10px 5px 10px;
+    padding: 6px 25px 6px 25px;
+    border: none; 
+    border-radius: 3px;
+    font-family: 'Bricolage';
+    cursor: pointer;
 }
 
 footer {
